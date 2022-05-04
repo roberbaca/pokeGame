@@ -1,0 +1,57 @@
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "pokefont";
+  src: url("../../fonts/Pokemon Solid.ttf") format("truetype");
+}
+.pokemonName {
+  font-family: "pokefont";
+  font-size: 4rem;
+  text-shadow: 0px 1px 0 rgb(0, 0, 0), 0px -1px 0 rgb(0, 0, 0), 1px 0px 0 rgb(0, 0, 0), -1px 0px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 0px 2px 0 rgb(0, 0, 0), 0px -2px 0 rgb(0, 0, 0), 2px 0px 0 rgb(0, 0, 0), -2px 0px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0), 3px 0px 0 rgb(0, 0, 0), -3px 0px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0), 3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), -3px -3px 0 rgb(0, 0, 0), 0px 4px 0 rgb(0, 0, 0), 0px -4px 0 rgb(0, 0, 0), 4px 0px 0 rgb(0, 0, 0), -4px 0px 0 rgb(0, 0, 0), 4px 4px 0 rgb(0, 0, 0), 4px -4px 0 rgb(0, 0, 0), -4px 4px 0 rgb(0, 0, 0), -4px -4px 0 rgb(0, 0, 0), 0px 5px 0 rgb(0, 0, 0), 0px -5px 0 rgb(0, 0, 0), 5px 0px 0 rgb(0, 0, 0), -5px 0px 0 rgb(0, 0, 0), 5px 5px 0 rgb(0, 0, 0), 5px -5px 0 rgb(0, 0, 0), -5px 5px 0 rgb(0, 0, 0), -5px -5px 0 rgb(0, 0, 0), 0px 6px 0 rgb(0, 0, 0), 0px -6px 0 rgb(0, 0, 0), 6px 0px 0 rgb(0, 0, 0), -6px 0px 0 rgb(0, 0, 0), 6px 6px 0 rgb(0, 0, 0), 6px -6px 0 rgb(0, 0, 0), -6px 6px 0 rgb(0, 0, 0), -6px -6px 0 rgb(0, 0, 0);
+  -webkit-text-shadow: 0px 1px 0 rgb(0, 0, 0), 0px -1px 0 rgb(0, 0, 0), 1px 0px 0 rgb(0, 0, 0), -1px 0px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 0px 2px 0 rgb(0, 0, 0), 0px -2px 0 rgb(0, 0, 0), 2px 0px 0 rgb(0, 0, 0), -2px 0px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0), 3px 0px 0 rgb(0, 0, 0), -3px 0px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0), 3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), -3px -3px 0 rgb(0, 0, 0), 0px 4px 0 rgb(0, 0, 0), 0px -4px 0 rgb(0, 0, 0), 4px 0px 0 rgb(0, 0, 0), -4px 0px 0 rgb(0, 0, 0), 4px 4px 0 rgb(0, 0, 0), 4px -4px 0 rgb(0, 0, 0), -4px 4px 0 rgb(0, 0, 0), -4px -4px 0 rgb(0, 0, 0), 0px 5px 0 rgb(0, 0, 0), 0px -5px 0 rgb(0, 0, 0), 5px 0px 0 rgb(0, 0, 0), -5px 0px 0 rgb(0, 0, 0), 5px 5px 0 rgb(0, 0, 0), 5px -5px 0 rgb(0, 0, 0), -5px 5px 0 rgb(0, 0, 0), -5px -5px 0 rgb(0, 0, 0), 0px 6px 0 rgb(0, 0, 0), 0px -6px 0 rgb(0, 0, 0), 6px 0px 0 rgb(0, 0, 0), -6px 0px 0 rgb(0, 0, 0), 6px 6px 0 rgb(0, 0, 0), 6px -6px 0 rgb(0, 0, 0), -6px 6px 0 rgb(0, 0, 0), -6px -6px 0 rgb(0, 0, 0);
+  -moz-text-shadow: 0px 1px 0 rgb(0, 0, 0), 0px -1px 0 rgb(0, 0, 0), 1px 0px 0 rgb(0, 0, 0), -1px 0px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 0px 2px 0 rgb(0, 0, 0), 0px -2px 0 rgb(0, 0, 0), 2px 0px 0 rgb(0, 0, 0), -2px 0px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0), 0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0), 3px 0px 0 rgb(0, 0, 0), -3px 0px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0), 3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), -3px -3px 0 rgb(0, 0, 0), 0px 4px 0 rgb(0, 0, 0), 0px -4px 0 rgb(0, 0, 0), 4px 0px 0 rgb(0, 0, 0), -4px 0px 0 rgb(0, 0, 0), 4px 4px 0 rgb(0, 0, 0), 4px -4px 0 rgb(0, 0, 0), -4px 4px 0 rgb(0, 0, 0), -4px -4px 0 rgb(0, 0, 0), 0px 5px 0 rgb(0, 0, 0), 0px -5px 0 rgb(0, 0, 0), 5px 0px 0 rgb(0, 0, 0), -5px 0px 0 rgb(0, 0, 0), 5px 5px 0 rgb(0, 0, 0), 5px -5px 0 rgb(0, 0, 0), -5px 5px 0 rgb(0, 0, 0), -5px -5px 0 rgb(0, 0, 0), 0px 6px 0 rgb(0, 0, 0), 0px -6px 0 rgb(0, 0, 0), 6px 0px 0 rgb(0, 0, 0), -6px 0px 0 rgb(0, 0, 0), 6px 6px 0 rgb(0, 0, 0), 6px -6px 0 rgb(0, 0, 0), -6px 6px 0 rgb(0, 0, 0), -6px -6px 0 rgb(0, 0, 0);
+  font-size: 55px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.hide {
+  transform: scale(2.5);
+  filter: brightness(0);
+  transition: 1s ease-out;
+  margin: 3rem;
+}
+
+.reveal {
+  transform: scale(2.5);
+  filter: brightness(1);
+  transition: 1s ease-out;
+  margin: 3rem;
+}
+
+/*# sourceMappingURL=Card.css.map */
