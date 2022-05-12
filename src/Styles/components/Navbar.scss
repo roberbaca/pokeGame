@@ -1,0 +1,96 @@
+@use "../Global";
+
+.navbar {
+    background-color: Global.$pika-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 0.3rem solid;
+    border-color: Global.$main-color;
+    margin-bottom: 0.5rem;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
+  
+    .navbar__sitelogo img {
+        width: 8rem;
+    }
+
+    .hud {
+        display: flex;
+        flex-direction: column;  
+        width: 50%;       
+        padding: 0.5rem; 
+
+        .hud__category {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            text-transform: capitalize;
+            width: 80%;
+
+            .hud__data {
+                margin: 0;
+                width: 20%;
+                display: block;
+            }
+            // -webkit-text-stroke-width: 0.01rem;
+            // -webkit-text-stroke-color: black;
+            // -webkit-text-fill-color: white;
+           
+        } 
+    } 
+
+  
+}
+
+
+
+/* ----------------
+    Media Queries
+------------------*/
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (min-width: 1440px) { 
+   
+    
+}
+
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (max-width: 1440px) { 
+           
+}
+
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1200px) { 
+     
+}
+
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 992px) { 
+}
+
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 768px) { 
+ 
+  
+}
+
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) { 
+ 
+}
+
+@media (max-width: 375px) { 
+}

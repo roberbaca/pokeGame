@@ -2,10 +2,10 @@
 	Colors
 --------------*/
 
-$background-color: rgb(21,22,29);
+$background-color: #333;
 $grey: rgb(223,228,234);
 $darkgrey: grey;
-$pika-color:#ffcb05;
+$pika-color:#f1c40f;
 $logo1: #ffcb05;
 $logo2: #2a75bb;
 $main-color: #D10024;
@@ -34,6 +34,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #333;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 /*-----------------
@@ -42,6 +46,9 @@ body {
 
 html {
     scroll-behavior: smooth; 
+    margin: 0;
+    padding: 0;
+    // background-color: #333;
 }
 
 li {

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #f1c40f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 0.3rem solid;
+  border-color: #D10024;
+  margin-bottom: 0.5rem;
+}
+.navbar .navbar__sitelogo img {
+  width: 8rem;
+}
+.navbar .hud {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0.5rem;
+}
+.navbar .hud .hud__category {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-transform: capitalize;
+  width: 80%;
+}
+.navbar .hud .hud__category .hud__data {
+  margin: 0;
+  width: 20%;
+  display: block;
+}
+
+/* ----------------
+    Media Queries
+------------------*/
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas grandes (desktops de menos de 1200px) */
+/* Pantallas medianas (tablets de menos de 992px) */
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+
+/*# sourceMappingURL=Navbar.css.map */
