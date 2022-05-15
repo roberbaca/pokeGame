@@ -1,0 +1,221 @@
+@use "../Global";
+
+@font-face {
+    font-family: 'pokefont';
+    src: url("../../fonts/Pokemon\ Solid.ttf") format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300&display=swap');
+
+.game__container {
+    width: 100%;
+    // height: 100vh;   
+    background-color: #333;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .game__background {     
+        margin: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .game__title {
+            // color: Global.$pika-color;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            width: 100%;
+
+            font-family: 'Bangers', Arial, sans-serif;
+            font-size: 3rem;
+            -webkit-text-stroke-width: 0.1rem;
+            -webkit-text-stroke-color: Global.$logo2;
+            -webkit-text-fill-color: Global.$logo1;
+            text-transform: capitalize;
+        }
+
+        .game__pokemonimg {
+            width: 100%; 
+                       
+        }
+
+        .game__pokehide {
+            transform: scale(2.5);
+            filter: brightness(0);
+            transition: 1s ease-out;
+            margin: 0;
+            
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            // position: absolute; 
+            // top: 30%;
+            // left: 25%;            
+        }
+        
+        .game__pokereveal {
+            transform: scale(2.5);
+            filter: brightness(1);
+            transition: 1s ease-out;
+            margin: 0; 
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            // position: absolute; 
+            // top: 30%;
+            // left: 25%;                     
+        }
+    }
+
+    .game__choices {    
+        width: 100%;
+        // background-color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        align-items: center;
+        padding-top: 1rem;
+        background-color: Global.$background-color;
+        margin-bottom: 1rem;
+    
+    
+
+        .game__buttoncontainer {
+            width: 100%;         
+            display: flex;
+            flex-direction: column;  
+            justify-content: center;    
+            align-items: center;       
+            
+            .game__button {
+                background: Global.$pika-color;
+                color: black;
+                border: 1px solid;   
+                border-color: Global.$pika-color;
+                border-radius: 0.4rem;
+                margin: 0;        
+                font-size: 0.8rem;
+                text-transform: capitalize;
+                padding: 0.5rem 0.8rem;
+                width: 10rem;
+                box-sizing: border-box;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                margin: 0.5rem;
+            }
+
+            .game__button:hover {
+                cursor: pointer;    
+                color: black;
+            }
+
+            .game__button::after {
+                content: "";
+                background: white;    
+                position: absolute;
+                z-index: -1;
+                display: block;
+                transition: all 0.3s ease;    
+            }
+
+            .game__button::after {
+                left: -20%;
+                right: -20%;
+                top: 0;
+                bottom: 0;
+                transform: skewX(-45deg) scale(0, 1);        
+            }
+
+            .game__button:hover::after {
+                transform: skewX(-45deg) scale(1, 1);
+                transition: all 0.3s ease-out;
+            }
+
+            .game__button--wrong {
+                animation: shake 0.5s;
+                background: Global.$main-color;
+                color: white;
+                border: 1px solid;   
+                border-color: Global.$main-color;
+                border-radius: 0.4rem;
+                margin: 0;        
+                font-size: 0.8rem;
+                text-transform: capitalize;
+                padding: 0.5rem 0.8rem;
+                width: 10rem;
+                box-sizing: border-box;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                margin: 0.5rem;
+            }
+
+            .pokeballcontainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pokeball {
+                width: 2rem;
+                height: 2rem;
+               
+            }
+              
+            .pokeball:hover {
+                animation: shake 0.5s;
+            }
+              
+            @keyframes shake {
+                0% { transform: translate(1px, 1px) rotate(0deg); }
+                10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                20% { transform: translate(-3px, 0px) rotate(1deg); }
+                30% { transform: translate(3px, 2px) rotate(0deg); }
+                40% { transform: translate(1px, -1px) rotate(1deg); }
+                50% { transform: translate(-1px, 2px) rotate(-1deg); }
+                60% { transform: translate(-3px, 1px) rotate(0deg); }
+                70% { transform: translate(3px, 1px) rotate(-1deg); }
+                80% { transform: translate(-1px, -1px) rotate(1deg); }
+                90% { transform: translate(1px, 2px) rotate(0deg); }
+                100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+        }
+    }
+}
+
+
+.game__answercontainer {
+    display: block;
+    height: 2rem;
+}
+
+
+.game__answerreveal {
+    font-family: 'Bangers', Arial, sans-serif;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: Global.$logo2;
+    -webkit-text-fill-color: Global.$logo1;
+    text-transform: capitalize;
+    margin: 0;   
+}
+
+.game__answerhide {
+    display: none;
+}
+
+.game__buttonwraper {
+  display: flex;
+  flex: row;
+}
+
+
+
+
