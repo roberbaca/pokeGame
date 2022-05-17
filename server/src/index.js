@@ -9,7 +9,7 @@ app.use( bodyParser.json() );
 app.use( cors() );
 
 // JSON web token
-const { generateJWT } = require('./utils/jwt');
+//const { generateJWT } = require('./utils/jwt');
 
 
 const userRouter = require("./routes/user");

@@ -3,9 +3,15 @@ const userController = require("../controllers/user");
 
 const router = express.Router();
 
-router.post("/", userController.createUser);
+//router.get("/", userController.helloWorld); // para testeo
 
-router.get("/", userController.helloWorld);
+router.post("/register", userController.registerUser);
+
+router.post("/login", userController.loginUser);
+
+router.get("/", userController.getUserData);
+
+router.patch("/", userController.updateScore);
 
 router.get("/rank", () =>{
     console.log("Get All Users Ranking");

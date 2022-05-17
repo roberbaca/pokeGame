@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "prisma generate",
-    "dev": "nodemon ./index.js",
+    "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
