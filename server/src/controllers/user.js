@@ -1,5 +1,6 @@
 const user = require("../models/user");
-const jwebtoken = require("../utils/jwt");
+const jwebtoken = require("../utils/jwt"); // generacion de token
+const { encryptPassword, comparePasswords } = require('../utils/bcrypt'); //Encriptacion de Contraseñas
 
 // para testeo:
 const helloWorld = async (req, res) => {
@@ -13,15 +14,16 @@ const helloWorld = async (req, res) => {
     }
 }
 
+// Registro de usuarios nuevos
 const registerUser = async (req, res) => {
-    const username = req.body.username;
-    const email = req.body.email;
-    const password = req.body.password;
-    const token = await jwebtoken.generateJWT({username, email});  // generamos el token
-    console.log('token: ', token);
-
-    try {
-        const newUser = await user.create(username, email, password, token);
+    try {        
+        const username = req.body.username;
+        const email = req.body.email;
+        const password = req.body.password;
+        const hashedPassword = encryptPassword(password);               // encriptamos la contraseña
+        const token = await jwebtoken.generateJWT({username, email});   // generamos el token
+        console.log('token: ', token);
+        const newUser = await user.create( username, email, hashedPassword, token );
         res.send(newUser);
     } catch(error) {
         console.log(error);
@@ -30,18 +32,20 @@ const registerUser = async (req, res) => {
     }
 }
 
-const loginUser = async (req, res) => {    
-    const email = req.body.email;
-    const password = req.body.password;
-
+// Logueo de usuarios
+const loginUser = async (req, res) => {        
     try {
+        const email = req.body.email;
+        const password = req.body.password;    
         const userData = await user.findUserByEmail(email);
-        if (password === userData.password) {
-            res.send("logged in: " + userData.username);
+        const isValid = comparePasswords(password, userData.password); // comparamos contraseñas encriptadas
+
+        if (isValid) {        
+            res.status(202).send("logged in: " + userData.username + " token: " + userData.token );
+        } else {
+            res.status(404).send({ token: null, problem: { message: 'Invalid email or password'} });
         }
-        else {
-            res.send("invalid password");
-        }
+          
     } catch(error) {
         console.log(error);
         res.statusCode = 500;
@@ -49,15 +53,11 @@ const loginUser = async (req, res) => {
     }
 }
 
-
-const getUserData = async (req, res) => {    
-    if (req.query.token === "") {
-        res.statusCode = 400;
-        res.send("Token cannot be empty");
-    }
+// obtenemos TODOS los resultados de la base de datos
+const getAllUsersData = async (req, res) => {    
     try {
-        const userData = await user.findUserByToken(req.query.token);
-        res.send(userData);
+        const allUsersData = await user.getAllData();
+        res.send(allUsersData);
     } catch(error) {
         console.log(error);
         res.statusCode = 500;
@@ -65,19 +65,31 @@ const getUserData = async (req, res) => {
     }
 }
 
+// obtenemos los 10 primeros usuarios ordenados de acuerdo a su ranking
+const getAllRankedUsers = async (req, res) => {    
+    try {
+        const userRanks = await user.orderUsersByRank();
+        res.send(userRanks);
+    } catch(error) {
+        console.log(error);
+        res.statusCode = 500;
+        res.send(error.message);
+    }
+}
+
+
+// Actualizamos score de un usuario
 const updateScore = async (req, res) => {    
-    const score = req.body.score;
-    const token = req.body.token;
-
+    
     try {
-
-        const userData = await user.findUser(req.body.token);
+        const score = req.body.score;
+        const token = req.body.token;
+        const userData = await user.findUserByToken(req.body.token);
 
         if (score > userData.score) {
             const updatedUserScore = await user.updateScore(token, score);       
             res.send(updatedUserScore);
-        }
-        else {
+        } else {
             res.send("No new record");
         }
     } catch(error) {
@@ -88,5 +100,4 @@ const updateScore = async (req, res) => {
 }
 
 
-
-module.exports = { helloWorld, registerUser, loginUser, getUserData, updateScore };
+module.exports = { helloWorld, registerUser, loginUser, getAllUsersData, getAllRankedUsers, updateScore };

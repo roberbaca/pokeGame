@@ -9,12 +9,10 @@ router.post("/register", userController.registerUser);
 
 router.post("/login", userController.loginUser);
 
-router.get("/", userController.getUserData);
+router.get("/rank", userController.getAllRankedUsers);
+
+router.get("/data", userController.getAllUsersData);
 
 router.patch("/", userController.updateScore);
-
-router.get("/rank", () =>{
-    console.log("Get All Users Ranking");
-})
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const prisma = require("../utils/client");
 
+// crear un usuario
 const create = async (username, email, password, token) => {
     try {
         const newUser = await prisma.user.create({
@@ -20,6 +21,7 @@ const create = async (username, email, password, token) => {
     }
 }
 
+// encontrar un usuario por el token
 const findUserByToken = async (token) => {
     try {
         const user = await prisma.user.findUnique({           
@@ -41,6 +43,7 @@ const findUserByToken = async (token) => {
     }
 }
 
+// encontrar un usuario por el mail
 const findUserByEmail = async (email) => {
     try {
         const loggedUser = await prisma.user.findUnique({           
@@ -53,6 +56,7 @@ const findUserByEmail = async (email) => {
             username: loggedUser.username,
             score: loggedUser.score,
             password: loggedUser.password,
+            token: loggedUser.token,
         }
 
        return userData;
@@ -63,6 +67,38 @@ const findUserByEmail = async (email) => {
     }
 }
 
+// ordena todos los usuarios registrados por su score
+const orderUsersByRank = async () => {
+    try {
+        const allUsers = await prisma.user.findMany();        
+        let allUsersData = [];
+
+      for (let i = 0; i < allUsers.length; i++) {
+        allUsersData[i] = ( { user: allUsers[i].username, score: allUsers[i].score });
+      }
+
+      const rankedList = allUsersData.sort((a, b) => (b.score - a.score));
+       return rankedList;
+        
+    } catch(error) {
+        console.log(error);
+        throw new Error(error);
+    }
+}
+
+// ordena todos los usuarios registrados por su score
+const getAllData = async () => {
+    try {
+        const allUsersData = await prisma.user.findMany();         
+        return allUsersData;
+        
+    } catch(error) {
+        console.log(error);
+        throw new Error(error);
+    }
+}
+
+// actualizar el score
 const updateScore = async (token, score) => {
     try {
         const updateUser = await prisma.user.update({           
@@ -88,4 +124,4 @@ const updateScore = async (token, score) => {
 }
 
 
-module.exports = { create, findUserByToken, findUserByEmail, updateScore };
+module.exports = { create, findUserByToken, findUserByEmail, getAllData, orderUsersByRank, updateScore };
