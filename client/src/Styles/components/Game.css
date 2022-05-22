@@ -45,7 +45,13 @@ a {
   justify-content: center;
   align-items: center;
 }
-.game__container .game__background {
+.game__container .game__card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.game__container .game__header {
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -55,34 +61,33 @@ a {
   align-items: center;
   width: 100%;
 }
-.game__container .game__background .game__title {
-  font-weight: bold;
+.game__container .game__header .game__title {
   margin: 0;
   margin-bottom: 1rem;
   margin-top: 2rem;
   width: 100%;
-  font-family: "Bangers", Arial, sans-serif;
-  font-size: 3rem;
-  -webkit-text-stroke-width: 0.1rem;
-  -webkit-text-stroke-color: #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
-  text-transform: capitalize;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-text-fill-color: white;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-.game__container .game__background .game__pokemonimg {
+.game__container .game__header .game__pokemonimg {
   width: 100%;
+  image-rendering: pixelated;
 }
-.game__container .game__background .game__pokehide {
+.game__container .game__header .game__pokehide {
   transform: scale(2.5);
   filter: brightness(0);
-  transition: 1s ease-out;
   margin: 0;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
-.game__container .game__background .game__pokereveal {
+.game__container .game__header .game__pokereveal {
   transform: scale(2.5);
   filter: brightness(1);
-  transition: 1s ease-out;
+  transition: 0.7s ease-out;
   margin: 0;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
@@ -94,7 +99,6 @@ a {
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
-  background-color: #333;
   margin-bottom: 1rem;
 }
 .game__container .game__choices .game__buttoncontainer {
@@ -103,15 +107,16 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 14rem;
 }
 .game__container .game__choices .game__buttoncontainer .game__button {
-  background: #f1c40f;
+  background: rgb(246, 230, 82);
   color: black;
   border: 1px solid;
-  border-color: #f1c40f;
+  border-color: rgb(246, 230, 82);
   border-radius: 0.4rem;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   padding: 0.5rem 0.8rem;
   width: 10rem;
@@ -152,7 +157,7 @@ a {
   border-color: #D10024;
   border-radius: 0.4rem;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   padding: 0.5rem 0.8rem;
   width: 10rem;
@@ -216,11 +221,12 @@ a {
 }
 
 .game__answerreveal {
-  font-family: "Bangers", Arial, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-text-fill-color: rgb(246, 230, 82);
+  font-weight: 700;
   font-size: 2rem;
-  -webkit-text-stroke-width: 0.1rem;
-  -webkit-text-stroke-color: #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
+  line-height: 2rem;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   text-transform: capitalize;
   margin: 0;
 }

@@ -1,0 +1,74 @@
+@use "../Global";
+
+.rank__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rank_table {
+        width: 20rem;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border:.1rem solid rgba(0,0,0,.3);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+            
+        .rank__subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid black;
+            font-weight: bold;
+            font-size: 1.1rem;
+     
+            .rank__order {
+                width: 15%;
+            }
+        
+            .rank__user {
+                width: 65%;
+                text-align: left;
+            }
+        
+            .rank__best {
+                width: 20%;
+            }
+        }   
+    
+        .rank__datacontainer {
+        
+            width: 100%;
+    
+            .rank__data {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+    
+                .rank__order {
+                    width: 15%;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            
+                .rank__user {
+                    width: 65%;
+                    text-align: left;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            
+                .rank__best {
+                    width: 20%;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    
+    }
+
+}    
+

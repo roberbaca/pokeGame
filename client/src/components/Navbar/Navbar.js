@@ -11,10 +11,12 @@ const Navbar = () => {
                 <img src={require("../../assets/logo-white.png")} alt="logo" className='sitelogo'/>
             </div> 
             <div className='hud'>
-                <div className='hud__category'>Guesses 
-                  <p className='hud__data'>7</p>
+                <div className='hud__col1'> 
+                  <p className='hud__title'>Guesses</p>
+                  <p className='hud__title'>Best in a row </p>
                 </div>
-                <div className='hud__category'>Best in a row 
+                <div className='hud__col2'>                 
+                  <p className='hud__data'>7</p>
                   <p className='hud__data'>7</p>
                 </div>
             </div>            

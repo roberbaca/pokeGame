@@ -34,26 +34,33 @@ a {
 }
 
 footer {
-  background-color: #f1c40f;
+  background-color: rgb(249, 46, 78);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 0.3rem solid;
-  border-color: #D10024;
-  position: absolute;
+  border-color: white;
   bottom: 0;
   width: 100%;
+  height: 4rem;
 }
 footer .footer__logo {
   width: 3rem;
+  padding-left: 1rem;
+}
+footer .footer-iconcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer .footer__socialicon {
   font-size: 3rem;
   color: white;
   transition: ease-in-out 0.5s;
+  padding-right: 1rem;
 }
 footer .footer__socialicon:hover {
-  color: #D10024;
+  color: rgb(246, 230, 82);
   transition: ease-in-out 0.5s;
 }
 footer .footer__copy {

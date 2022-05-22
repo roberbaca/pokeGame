@@ -9,7 +9,7 @@ const Home = () => {
     <div>
         <Link to ="/game" >Play</Link> 
         <Link to ="/login" >LOGIN</Link> 
-        <button>ranks</button>
+        <Link to ="/rank" >RANKS</Link> 
     </div>
   )
 }

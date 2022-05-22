@@ -16,7 +16,14 @@
     justify-content: center;
     align-items: center;
 
-    .game__background {     
+    .game__card {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .game__header {     
         margin: 0;
         margin-bottom: 0;
         margin-top: 0;
@@ -28,29 +35,37 @@
 
         .game__title {
             // color: Global.$pika-color;
-            font-weight: bold;
+            //font-weight: bold;
             margin: 0;
             margin-bottom: 1rem;
             margin-top: 2rem;
             width: 100%;
 
-            font-family: 'Bangers', Arial, sans-serif;
-            font-size: 3rem;
-            -webkit-text-stroke-width: 0.1rem;
-            -webkit-text-stroke-color: Global.$logo2;
-            -webkit-text-fill-color: Global.$logo1;
-            text-transform: capitalize;
+            //font-family: 'Bangers', Arial, sans-serif;
+            //font-size: 2.5rem;
+            //-webkit-text-stroke-width: 0.1rem;
+            // -webkit-text-stroke-color: Global.$logo2;
+            // -webkit-text-fill-color: Global.$logo1;
+            //text-transform: capitalize;
+            font-family: 'Josefin Sans', sans-serif;
+            -webkit-text-fill-color: white;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+            2px 2px 0 #000;
         }
 
         .game__pokemonimg {
-            width: 100%; 
-                       
+            width: 100%;  
+            image-rendering: pixelated;                      
         }
 
         .game__pokehide {
             transform: scale(2.5);
             filter: brightness(0);
-            transition: 1s ease-out;
+            // transition: 1s ease-out;
             margin: 0;
             
             margin-top: 2.5rem;
@@ -63,7 +78,7 @@
         .game__pokereveal {
             transform: scale(2.5);
             filter: brightness(1);
-            transition: 1s ease-out;
+            transition: 0.7s ease-out;
             margin: 0; 
             margin-top: 2.5rem;
             margin-bottom: 2rem;
@@ -81,7 +96,7 @@
         justify-content: center;    
         align-items: center;
         padding-top: 1rem;
-        background-color: Global.$background-color;
+        // background-color: Global.$background-color;
         margin-bottom: 1rem;
     
     
@@ -91,8 +106,13 @@
             display: flex;
             flex-direction: column;  
             justify-content: center;    
-            align-items: center;       
+            align-items: center;      
+            height: 14rem;
             
+            .game__buttonblock {
+               
+            }
+
             .game__button {
                 background: Global.$pika-color;
                 color: black;
@@ -100,7 +120,7 @@
                 border-color: Global.$pika-color;
                 border-radius: 0.4rem;
                 margin: 0;        
-                font-size: 0.8rem;
+                font-size: 1.2rem;
                 text-transform: capitalize;
                 padding: 0.5rem 0.8rem;
                 width: 10rem;
@@ -146,7 +166,7 @@
                 border-color: Global.$main-color;
                 border-radius: 0.4rem;
                 margin: 0;        
-                font-size: 0.8rem;
+                font-size: 1.2rem;
                 text-transform: capitalize;
                 padding: 0.5rem 0.8rem;
                 width: 10rem;
@@ -198,11 +218,17 @@
 
 
 .game__answerreveal {
-    font-family: 'Bangers', Arial, sans-serif;
+    // font-family: 'Bangers', Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-text-fill-color: Global.$pika-color;
+    font-weight: 700;
     font-size: 2rem;
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: Global.$logo2;
-    -webkit-text-fill-color: Global.$logo1;
+    line-height: 2rem;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+    // -webkit-text-stroke-width: 0.1rem;
+    // -webkit-text-stroke-color: Global.$logo2;
+    // -webkit-text-fill-color: Global.$logo1;
     text-transform: capitalize;
     margin: 0;   
 }

@@ -44,16 +44,14 @@ const Game = ({searchPokemon}) => {
   const getPokemonData = async () => {
 
     setReveal(false);  
-    getRandomPokemon(); 
-
-    
+    getRandomPokemon();     
 
     try {     
       
         // Chequeo si ya tengo la data de la PokeApi.
         // Si no encuentra nada, hago un fetch
 
-        if (localStorage.getItem("pokemon") !== null) {          
+        if (localStorage.getItem("pokemon") != null) {          
        
           console.log("NO HICE FETCH !");
           let cache = JSON.parse(localStorage.getItem("pokemon"));
@@ -62,7 +60,7 @@ const Game = ({searchPokemon}) => {
           setCorrectAnswer(allPokemon[correct].name); 
           setCorrectImg(allPokemon[correct].img); 
 
-        } else if (localStorage.getItem("pokemon") === null) {
+        } else if (localStorage.getItem("pokemon") == null) {
 
           for (let i = 1; i < ( max + 1 ); i++) {
             let pokemon = await axios.get(`${baseURL}/${i}/`);     
@@ -249,24 +247,23 @@ const Game = ({searchPokemon}) => {
     
     <div className='game__container'>  
    
-        <div className='game__backgroundcontainer'>
-          <div className='game__background'>            
-            <h1 className='game__title'>Who's That Pokémon?</h1>
-            <div className='game__pokemonimg'>
-              <img src={correctImg} alt="pokemonImg" className={reveal ? "game__pokereveal" : "game__pokehide"}/>      
-            </div>           
-          </div>
-        </div> 
+      <div className='game__card'>
+        <div className='game__header'>            
+          <h1 className='game__title'>Who's that Pokémon?</h1>
+        <div className='game__pokemonimg'>
+          <img src={correctImg} alt="pokemonImg" className={reveal ? "game__pokereveal" : "game__pokehide"}/>      
+        </div>           
+      </div>
+       
 
-        <div className='game__choices'>
-          
-          <div className='game__answercontainer'>
-            <p className={reveal ? "game__answerreveal" : "game__answerhide"}>It's {correctAnswer} !</p>
-          </div>
-          <button onClick={newGame}>New Game</button>
-          <button onClick={clearCache}>CLEAR</button>
+      <div className='game__choices'>          
+        <div className='game__answercontainer'>
+          <p className={reveal ? "game__answerreveal" : "game__answerhide"}>It's {correctAnswer} !</p>
+        </div>
+         
+          {/* <button onClick={clearCache}>CLEAR</button> */}
           <div className='game__buttoncontainer'>
-            <div>
+            {!reveal && <div className='game__buttonblock'>
               <div className='game__buttonwraper'>
                 <div className='pokeballcontainer'>
                   <img src={require("../../assets/pokeball.png")} alt="pokeball" className='pokeball'/>
@@ -276,16 +273,12 @@ const Game = ({searchPokemon}) => {
               <div className='game__buttonwraper'>
                 <div className='pokeballcontainer'>
                   <img src={require("../../assets/pokeball.png")} alt="pokeball" className='pokeball'/>
-
                 </div>
                 <button className={ (selected1 && !reveal) ? "game__button--wrong" : "game__button"  } onClick={guess} value = {pokeNames[1]} name="1">{pokeNames[1]}</button>     
-              </div>
-            </div>
-            <div>
+              </div>            
               <div className='game__buttonwraper'>
                 <div className='pokeballcontainer'>
                   <img src={require("../../assets/pokeball.png")} alt="pokeball" className='pokeball'/>  
-
                 </div>
                 <button className={ (selected2 && !reveal) ? "game__button--wrong" : "game__button"  } onClick={guess} value = {pokeNames[2]} name="2">{pokeNames[2]}</button>
               </div>
@@ -295,22 +288,23 @@ const Game = ({searchPokemon}) => {
                 </div>
                 <button className={ (selected3 && !reveal) ? "game__button--wrong" : "game__button"  } onClick={guess} value = {pokeNames[3]} name="3">{pokeNames[3]}</button>    
               </div>
-            </div>
-            <p>Consecutive Guesses: {guessCount}</p>
-        
-            
-          </div>
-        </div>
+            </div>}
 
+            {reveal && <div className='game__buttonblock'>
+              <button className='game__button' onClick={newGame}>Next</button>
+            </div>}
+            
+          </div>            
+        </div>
+      </div>
     </div>
   )
-
 }
 
 export default Game
 
 
-
+{/* <p>Consecutive Guesses: {guessCount}</p> */}
 
 
 
