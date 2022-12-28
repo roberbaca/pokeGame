@@ -1,0 +1,55 @@
+/*-------------
+	Colors
+--------------*/
+
+$shadow: hsla(0, 0%, 0%, 0.16);
+$pokeball: rgb(249,46,78);
+$light-background: rgb(223, 228, 234);
+$background-color: #333;
+$grey: rgb(223,228,234);
+$darkgrey: grey;
+$pika-color:rgb(246,230,82);
+$logo1: #ffcb05;
+$logo2: #2a75bb;
+$main-color: #D10024;
+$bug: #26de81;
+$dragon: #ffeaa7;
+$electric: #fed330;
+$fairy: #FF0069;
+$fighting: #30336b;
+$fire: #f0932b;
+$flying: #81ecec;
+$grass: #00b894;
+$ground: #EFB549;
+$ghost: #a55eea;
+$ice: #74b9ff;
+$normal: #95afc0;
+$poison: #6c5ce7;
+$psychic: #a29bfe;
+$rock: #2d3436;
+$water: #0190FF;
+
+/*-----------------
+	Typography
+-------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: $light-background; 
+
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+
+html {
+    scroll-behavior: smooth; 
+    margin: 0;
+    padding: 0;
+}

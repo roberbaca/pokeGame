@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(223, 228, 234);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: rgb(246, 230, 82);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.3rem solid;
+  border-color: white;
+  width: 100%;
+  height: 3.3rem;
+}
+footer .footer__logo {
+  width: 1.8rem;
+  padding-left: 1rem;
+}
+footer .footer__logo:hover {
+  animation: shake 0.5s;
+}
+footer .footer__iconcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer__iconcontainer .footer__socialicon {
+  margin-right: 0.5rem;
+}
+footer .footer__iconcontainer .footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: black;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 100%;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+}
+footer .footer__iconcontainer .footer__icon:hover {
+  animation: shake 0.5s;
+}
+footer .footer__copy {
+  font-weight: 400;
+}
+footer span {
+  font-weight: bold;
+}
+
+/* ----------------
+    Media Queries
+------------------*/
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas grandes (desktops de menos de 1200px) */
+/* Pantallas medianas (tablets de menos de 992px) */
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 376px) {
+  footer .link {
+    display: none;
+  }
+  footer .footer__iconcontainer {
+    display: none;
+  }
+  footer .footer__copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  footer .footer__copy span {
+    margin-left: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

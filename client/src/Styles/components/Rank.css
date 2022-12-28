@@ -1,0 +1,105 @@
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(223, 228, 234);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.rank__section .rank__table {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1000;
+  width: 20rem;
+  height: 25rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.rank__section .rank__table .rank__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.15rem solid rgb(249, 46, 78);
+}
+.rank__section .rank__table .rank__header .badge {
+  width: 15%;
+}
+.rank__section .rank__table .rank__header .rank__title {
+  margin: 0;
+  color: rgb(249, 46, 78);
+  font-weight: bold;
+}
+.rank__section .rank__table .rank__header .closebtn {
+  font-size: 2rem;
+  color: rgb(249, 46, 78);
+}
+.rank__section .rank__table .rank__header .closebtn:hover {
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+.rank__section .rank__table .rank__subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.rank__section .rank__table .rank__subtitle .rank__order {
+  width: 15%;
+}
+.rank__section .rank__table .rank__subtitle .rank__user {
+  width: 65%;
+  text-align: left;
+}
+.rank__section .rank__table .rank__subtitle .rank__best {
+  width: 20%;
+}
+.rank__section .rank__table .rank__datacontainer {
+  width: 100%;
+}
+.rank__section .rank__table .rank__datacontainer .rank__data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.rank__section .rank__table .rank__datacontainer .rank__data .rank__order {
+  width: 15%;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.rank__section .rank__table .rank__datacontainer .rank__data .rank__user {
+  width: 65%;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.rank__section .rank__table .rank__datacontainer .rank__data .rank__best {
+  width: 20%;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=Rank.css.map */

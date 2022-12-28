@@ -1,0 +1,341 @@
+@use "../Global";
+
+@font-face {
+    font-family: 'pokefont';
+    src: url("../../fonts/Pokemon\ Solid.ttf") format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300&display=swap');
+
+.game__section {
+    background-color: Global.$light-background; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+
+    .game__card {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 35%;        
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 3px 3px 6px Global.$shadow;
+       
+        .game__title {
+            color: black;
+            margin: 0;       
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            .pokemontitle {
+                width: 8rem;      
+                
+                &:hover {
+                    animation: shake 0.5s;
+                }
+            }        
+        }
+
+        .game__wraper {     
+            margin: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100%;              
+            
+            .game__pokemonimg {
+                width: 100%;  
+                image-rendering: pixelated;  
+                margin: 0; 
+                
+                .game__pokehide {
+                    transform: scale(2.5);
+                    filter: brightness(0);
+                    margin: 0;            
+                    // margin-top: 2.5rem;
+                    // margin-bottom: 2rem;     
+                }
+                
+                .game__pokereveal {
+                    transform: scale(2.5);
+                    filter: brightness(1);
+                    transition: 0.7s ease-out;
+                    margin: 0; 
+                    // margin-top: 2.5rem;
+                    // margin-bottom: 2rem;          
+                }
+            }   
+           
+        }
+    
+        .game__choices {    
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;    
+            align-items: center;
+            //padding-top: 1rem;  
+    
+            .game__buttoncontainer {
+                width: 100%;         
+                display: flex;
+                flex-direction: column;  
+                justify-content: center;    
+                align-items: center;      
+                height: 14rem;                    
+    
+                .game__button--wrong {
+                    animation: shake 0.5s;
+                    background: Global.$main-color;
+                    color: white;
+                    border: 1px solid;   
+                    border-color: Global.$main-color;
+                    border-radius: 0.4rem;
+                    margin: 0;        
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                    padding: 0.5rem 0.8rem;
+                    width: 10rem;
+                    box-sizing: border-box;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+                    margin: 0.5rem;
+                }
+    
+                .pokeballcontainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                .pokeball {
+                    width: 2rem;
+                    height: 2rem;  
+                    
+                    &:hover {
+                        animation: shake 0.5s;
+                    }
+                }               
+            }
+        }        
+    }    
+}
+
+
+.game__answercontainer {
+    display: block;
+    height: 2rem;
+    width: 100%;    
+
+    .game__answerreveal {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2rem;
+        text-transform: capitalize;
+        margin: 0;   
+    }
+    
+    .game__answerhide {
+        display: none;
+    }
+
+}
+
+.game__button {
+    background: Global.$pika-color;
+    color: black;
+    border: 1px solid;   
+    border-color: Global.$pika-color;
+    border-radius: 0.4rem;
+    margin: 0;        
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 0.5rem 0.8rem;
+    width: 10rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0.5rem;
+
+    &:hover {
+        cursor: pointer;    
+        color: black;
+    }
+
+    &::after {
+        content: "";
+        background: white;    
+        position: absolute;
+        z-index: -1;
+        display: block;
+        transition: all 0.3s ease;    
+    }
+
+    &::after {
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);        
+    }
+
+    &:hover::after {
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+.game__buttonwraper {
+    display: flex;
+    flex: row;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* ----------------
+    Media Queries
+------------------*/
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (min-width: 1440px) {
+}
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (max-width: 1440px) {
+}
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1200px) {
+}
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 992px) {
+}
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 768px) {
+    .game__section {     
+        .game__card {                     
+            width: 55%;           
+        }
+    }
+}
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) {
+    .game__section {     
+        .game__card {                     
+            width: 80%;  
+            .game__title {                
+                margin-bottom: 2rem;             
+                font-size: 2rem;    
+                .pokemontitle {
+                    width: 6rem;              
+                }        
+            }             
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .game__section {     
+        .game__card {                     
+            width: 80%;   
+            .game__title {                
+                margin-bottom: 2rem;             
+                font-size: 2rem;    
+                .pokemontitle {
+                    width: 5rem;              
+                }        
+            }
+            
+        .game__choices {                 
+            .game__buttoncontainer {               
+                height: 11.5rem;                    
+    
+                .game__button--wrong {                 
+                    font-size: 1.2rem;
+                    padding: 0.5rem 0.8rem;
+                    width: 10rem;                   
+                    margin: 0.5rem;
+                }    
+    
+                .pokeball {
+                    width: 1.2rem;
+                    height: 1.2rem;                
+                }               
+            }
+        }        
+
+            .game__wraper {                 
+                .game__pokemonimg { 
+                    .game__pokehide {
+                        transform: scale(1.5);     
+                    }                    
+                    .game__pokereveal {
+                        transform: scale(1.5);         
+                    }
+                }  
+            }
+        }  
+        .game__button {      
+            font-size: 0.8rem;       
+            padding: 0.25rem 0.4rem;
+            width: 8rem;   
+        }    
+    }
+}
+
+
+@media (max-width: 320px) {
+    .game__section {     
+        .game__card {                     
+            width: 75%;   
+            .game__title {                
+                margin-bottom: 1rem;             
+                font-size: 1.5rem;    
+                .pokemontitle {
+                    width: 5rem;              
+                }        
+            }
+
+            .game__wraper {                 
+                .game__pokemonimg { 
+                    .game__pokehide {
+                        transform: scale(1);     
+                    }                    
+                    .game__pokereveal {
+                        transform: scale(1);         
+                    }
+                }  
+            }
+        }      
+    }
+}

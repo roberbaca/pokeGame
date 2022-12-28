@@ -1,0 +1,45 @@
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(223, 228, 234);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 10px solid rgb(249, 46, 78);
+  /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+/*# sourceMappingURL=LoadingSpinner.css.map */

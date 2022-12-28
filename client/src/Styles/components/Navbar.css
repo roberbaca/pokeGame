@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*-------------
+	Colors
+--------------*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(223, 228, 234);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-----------------
+	    Global
+-------------------*/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+}
+
+.navbar {
+  background-color: rgb(246, 230, 82);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+  border-bottom: 0.3rem solid;
+  border-color: white;
+}
+.navbar .navbar__sitelogo img {
+  width: 8rem;
+  padding-left: 2rem;
+}
+.navbar .navbar__sitelogo:hover {
+  animation: shake 0.5s;
+}
+.navbar .hud .hud__scorewraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .hud .hud__scorewraper .hud__scoretitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.navbar .hud .hud__scorewraper .hud__scoretitle .score__icon {
+  color: black;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+.navbar .hud .hud__scorewraper .hud__scoretitle .hud__title {
+  color: black;
+  font-size: 1.3rem;
+  text-align: left;
+  margin: 0;
+  width: 5rem;
+}
+.navbar .hud .hud__scorewraper .hud__pointswraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.navbar .hud .hud__scorewraper .hud__pointswraper .hud__points {
+  color: black;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.navbar .hud__icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+.navbar .hud__icons .icon__wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+.navbar .hud__icons .icon__wraper .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 100%;
+  box-shadow: 3px 3px 6px hsla(0deg, 0%, 0%, 0.16);
+}
+.navbar .hud__icons .icon__wraper .icon:hover {
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+.navbar .hud__icons .icon__wraper .icon__label {
+  margin: 0;
+  margin-top: 0.2rem;
+  color: black;
+  text-transform: capitalize;
+}
+
+/* ----------------
+    Media Queries
+------------------*/
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas grandes (desktops de menos de 1200px) */
+/* Pantallas medianas (tablets de menos de 992px) */
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    height: 3.5rem;
+  }
+  .navbar .navbar__sitelogo img {
+    width: 6rem;
+    padding-left: 1rem;
+  }
+  .navbar .hud {
+    margin-right: 1rem;
+    margin-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .navbar .hud .hud__scorewraper {
+    margin: 0;
+  }
+  .navbar .hud .hud__scorewraper .hud__scoretitle .score__icon {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__scoretitle .hud__title {
+    font-size: 1rem;
+    width: 3rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__pointswraper {
+    margin-bottom: 0.25rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__pointswraper .hud__points {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .navbar .hud__icons {
+    width: 50%;
+  }
+  .navbar .hud__icons .icon__wraper {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .navbar .hud__icons .icon__wraper .icon {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+  .navbar .hud__icons .icon__wraper .icon__label {
+    margin: 0;
+    margin-top: 0.2rem;
+  }
+}
+@media (max-width: 376px) {
+  .navbar {
+    height: 3.5rem;
+  }
+  .navbar .navbar__sitelogo img {
+    width: 6rem;
+    padding-left: 1rem;
+  }
+  .navbar .hud {
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .navbar .hud .hud__scorewraper {
+    margin: 0;
+  }
+  .navbar .hud .hud__scorewraper .hud__scoretitle .score__icon {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__scoretitle .hud__title {
+    font-size: 1rem;
+    width: 5rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__pointswraper {
+    margin-bottom: 0.25rem;
+  }
+  .navbar .hud .hud__scorewraper .hud__pointswraper .hud__points {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .navbar .hud__icons {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Navbar.css.map */

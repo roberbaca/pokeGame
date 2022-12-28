@@ -1,0 +1,100 @@
+@use "../Global";
+
+.rank__section {
+
+    .rank__table {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;   
+        z-index: 1000;
+        width: 20rem;
+        height: 25rem;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+
+        .rank__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 0.15rem solid Global.$pokeball;
+
+            .badge {
+                width: 15%;
+            }
+
+            .rank__title {
+                margin: 0;
+                color: Global.$pokeball;
+                font-weight: bold;
+            }
+
+            .closebtn {
+                font-size: 2rem;
+                color: Global.$pokeball;
+
+                &:hover {
+                    cursor: pointer;
+                    animation: shake 0.5s;
+                }
+            }
+        }
+            
+        .rank__subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            // border-bottom: 1px solid black;
+            font-weight: bold;
+            font-size: 1.1rem;
+     
+            .rank__order {
+                width: 15%;
+            }
+        
+            .rank__user {
+                width: 65%;
+                text-align: left;
+            }
+        
+            .rank__best {
+                width: 20%;
+            }
+        }   
+    
+        .rank__datacontainer {
+        
+            width: 100%;
+    
+            .rank__data {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+    
+                .rank__order {
+                    width: 15%;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            
+                .rank__user {
+                    width: 65%;
+                    text-align: left;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            
+                .rank__best {
+                    width: 20%;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+            }
+        }    
+    }
+}    
+
