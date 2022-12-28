@@ -1,10 +1,9 @@
 import React from 'react'
 import '../../Styles/components/Footer.css';
 import '../../Styles/Global.css';
-import { FaGithubAlt, FaLinkedin } from "react-icons/fa";
+import { FaGithubAlt } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
 import { GrLinkedinOption } from "react-icons/gr";
-import { useLocation } from "react-router-dom";
 
 
 const Footer = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactDom from 'react-dom'
 import { IoIosCloseCircle } from "react-icons/io";
 import "../../Styles/components/Rank.css";

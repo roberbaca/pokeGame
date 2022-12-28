@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"
 import axiosInstance from "../../utils/axiosInstance";
 import '../../Styles/components/Home.css';
 import '../../Styles/Global.css';
@@ -37,8 +36,9 @@ const handleChangeUserName = (e) => {
     setUserName(e.target.value);
 }
 
-const passwordNotify = () => toast("❌ Passwords do not match.");
-const loginNotify = () => toast("❌ Incorrect email or password.");
+const passwordNotify = () => toast("❌ Passwords do not match");
+const loginNotify = () => toast("❌ Incorrect email or password");
+const registerNotify = () => toast("✔ Registration successful. Please login");
 
 const onLogin = async () => {
   try {
@@ -55,6 +55,12 @@ const onRegister = async () => {
   try {
     if (password === confirmedPassword) {
       const response = await axiosInstance.post('/user/register', { username, email, password });  // llamada al back y obtenemos el token    
+      if (response.status == 200) {
+        registerNotify();
+        setRegisterFormVisible(!registerFormVisible);
+        setEmail("");
+        setPassword("");
+      }
     }
     else {
       console.log("Passwords do not match"); 
@@ -99,7 +105,7 @@ useEffect(() => {
           <input type="text" placeholder="User Name" autoComplete="off" className='form__input' value={username} onChange={handleChangeUserName} required/>
           <input type="text" placeholder="Email" autoComplete="off" className='form__input'  value={email} onChange={handleChangeEmail} required/>
           <input type="password" placeholder="Password" autoComplete="off" className='form__input' value={password} onChange={handleChangePassword} required/>
-          <input type="password" placeholder="Repeat password" autoComplete="off" required className='form__input' value={confirmedPassword} onChange={handleChangeConfirmedPassword} required/>
+          <input type="password" placeholder="Repeat password" autoComplete="off" className='form__input' value={confirmedPassword} onChange={handleChangeConfirmedPassword} required/>
           <button className='form__btn' type='button' onClick = {onRegister}>Sign Up</button>
           <p className='form__link' onClick={handleClick}>Do you have an account?</p>   
         </form> }
