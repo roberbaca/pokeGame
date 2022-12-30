@@ -45,6 +45,7 @@ const onLogin = async () => {
     const response = await axiosInstance.post('/user/login', { email, password });  // llamada al back y obtenemos el token       
     const accesToken = response.data.accessToken;    
     setToken(accesToken);  
+    console.log(accesToken)
   } catch (error) {
     loginNotify();
     console.log(error);    
