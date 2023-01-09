@@ -11,14 +11,9 @@ export const PATHS = {
         },      
         
         {
-            path: '/home',            
+            path: '/',            
             element: <Home/>
-        },  
-        
-        {
-            path: '*',            
-            element: <Home/>
-        },      
+        }   
     ],
 
     
@@ -26,14 +21,9 @@ export const PATHS = {
     noLoggedIn: [        
 
         {
-            path: '/home',            
+            path: '/',            
             element: <Home/>
-        },   
-        
-        {
-            path: '*',            
-            element: <Home/>
-        },        
+        } 
         
     ],   
 }

@@ -6,7 +6,6 @@ import { FaTrophy, FaUserAlt } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
 import { MdStars } from 'react-icons/md';
 import { RiCopperCoinLine } from 'react-icons/ri';
-//import { MdVideogameAsset } from 'react-icons/md'
 import '../../Styles/components/Navbar.css';
 import '../../Styles/Global.css';
 
@@ -24,7 +23,7 @@ const logout = () => {
   // console.log("logout");
   // localStorage.removeItem('token');
   localStorage.removeItem('usermail');
-  navigate("/home");     
+  navigate("/");     
 }
 
   return (

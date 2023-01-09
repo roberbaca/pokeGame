@@ -17,6 +17,8 @@ const Home = () => {
   const navigate = useNavigate(); 
 
   const handleClick = () => {
+    setEmail("");
+    setPassword("");
     setRegisterFormVisible(!registerFormVisible);
   }
 
