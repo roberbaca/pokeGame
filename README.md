@@ -4,12 +4,6 @@
 <br />
 <div align="center">
   
-  ![imagen](https://user-images.githubusercontent.com/83043304/211564342-92edfad9-6f4d-4a60-96c0-225f0d98409f.png)
-  
-  <a href="https://whosthatpokemongame.web.app/">
-    <img src="![imagen](https://user-images.githubusercontent.com/83043304/211564342-92edfad9-6f4d-4a60-96c0-225f0d98409f.png)" alt="Logo" width="75" height="30">
-  </a>
-
   <h3 align="center">Who´s that pokemon ? - PERN Fullstack project</h3>
 
   <p align="center">
@@ -46,7 +40,7 @@
 
 Embark on this adventure and become a Pokémon Master ! Guess who is that pokemon, earn points for each consecutive correct guess and lead the global rank table!
 
-![imagen](https://user-images.githubusercontent.com/83043304/211564074-56113104-410c-4406-8ecb-2fe9d03c044d.png)
+<img src = "![imagen](https://user-images.githubusercontent.com/83043304/211564074-56113104-410c-4406-8ecb-2fe9d03c044d.png)">
 
 ![imagen](https://user-images.githubusercontent.com/83043304/211561777-d6b6ddd6-278d-41b1-86de-885d0db98c44.png)
 
