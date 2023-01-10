@@ -43,13 +43,13 @@
 
 Embark on this adventure and become a Pokémon Master ! Guess who is that pokemon, earn points for each consecutive correct guess and lead the global rank table!
 
-<img src = "https://user-images.githubusercontent.com/83043304/211564074-56113104-410c-4406-8ecb-2fe9d03c044d.png" width="565" height="445">
+<img src = "https://user-images.githubusercontent.com/83043304/211566636-493c0c8b-20c0-437e-ba3d-ccd26cf88f51.png" width="565" height="445">
 
 <img src = "https://user-images.githubusercontent.com/83043304/211561777-d6b6ddd6-278d-41b1-86de-885d0db98c44.png" width="565" height="445">
 
-![imagen](https://user-images.githubusercontent.com/83043304/211561795-55f1cf94-302d-4f5f-9db2-02f3625a21b3.png)
+<img src = "https://user-images.githubusercontent.com/83043304/211561795-55f1cf94-302d-4f5f-9db2-02f3625a21b3.png" width="565" height="445">
 
-![imagen](https://user-images.githubusercontent.com/83043304/211561817-411521b0-83a2-41ff-a666-d5002986b8db.png)
+<img src = "https://user-images.githubusercontent.com/83043304/211561817-411521b0-83a2-41ff-a666-d5002986b8db.png" width="565" height="445">
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
