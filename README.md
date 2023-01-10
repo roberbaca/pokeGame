@@ -3,6 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+    <a href="https://expensetrackerpern.web.app/">
+    <img src="https://user-images.githubusercontent.com/83043304/140669718-0a350618-f217-4247-9d91-42d00c4c292f.png" alt="Logo" width="80" height="80">
+  </a>
   
   <h3 align="center">Who´s that pokemon ? - PERN Fullstack project</h3>
 
@@ -40,7 +43,7 @@
 
 Embark on this adventure and become a Pokémon Master ! Guess who is that pokemon, earn points for each consecutive correct guess and lead the global rank table!
 
-<img src = "![imagen](https://user-images.githubusercontent.com/83043304/211564074-56113104-410c-4406-8ecb-2fe9d03c044d.png)">
+<img src = "https://user-images.githubusercontent.com/83043304/211564074-56113104-410c-4406-8ecb-2fe9d03c044d.png" width="400" height="270">
 
 ![imagen](https://user-images.githubusercontent.com/83043304/211561777-d6b6ddd6-278d-41b1-86de-885d0db98c44.png)
 
