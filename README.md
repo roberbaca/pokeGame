@@ -3,6 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  
+  ![imagen](https://user-images.githubusercontent.com/83043304/211564342-92edfad9-6f4d-4a60-96c0-225f0d98409f.png)
+  
   <a href="https://whosthatpokemongame.web.app/">
     <img src="![imagen](https://user-images.githubusercontent.com/83043304/211564342-92edfad9-6f4d-4a60-96c0-225f0d98409f.png)" alt="Logo" width="75" height="30">
   </a>
