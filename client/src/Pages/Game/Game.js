@@ -151,6 +151,18 @@ const Game = ({searchPokemon}) => {
     progress: undefined,
   });
 
+  const waitToast = () => toast('🔎 Please wait. Fetching pokemons...', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
+
+
   const saveNewRecord = async (mail, score) => {
     try {
       const response = await axiosInstance.patch('/user/update-score', { email: mail, score: score });  // llamada al back y obtenemos el token       
@@ -189,7 +201,8 @@ const Game = ({searchPokemon}) => {
     }
   }, [email]);
   
-  useEffect( () => {    
+  useEffect( () => {  
+    waitToast();  
     getPokemonData();  
     getRanks();
 
