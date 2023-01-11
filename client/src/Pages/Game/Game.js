@@ -4,6 +4,8 @@ import axiosInstance from "../../utils/axiosInstance";
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import useToken from '../../utils/useToken';
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../Styles/components/Game.css';
@@ -26,6 +28,9 @@ const Game = ({searchPokemon}) => {
 
   const [isLoading, setIsLoading] = useState(false);       // spinner
   const [newRecord, setNewRecord] = useState(false);
+  const { token, setToken } = useToken();
+
+  const navigate = useNavigate(); 
 
   // de la DB obtengo:
   const [username, setUsername] = useState(""); 
@@ -187,7 +192,13 @@ const Game = ({searchPokemon}) => {
   useEffect( () => {    
     getPokemonData();  
     getRanks();
+
+    if (!token){
+      navigate("/");  
+    }
   }, []);
+
+
 
   return (    
     

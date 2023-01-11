@@ -3,7 +3,7 @@ import Router from './Router/Router';
 
 
 /*--------------------------------------------------------------------------------
-	# Who´s that Pokemon 1.0 - May, 2022
+	# Who´s that Pokemon 1.0 - Jan, 2023
 	# ------------------------------------------------------------------------------
 	# Designed & coded by Roberto Baca
 	# Personal website:  https://robertobaca-90035.web.app/ 

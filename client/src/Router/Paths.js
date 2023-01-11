@@ -13,17 +13,20 @@ export const PATHS = {
         {
             path: '/',            
             element: <Home/>
-        }   
+        } 
     ],
 
     
     // rutas a las que puede acceder el usuario que NO esta logueado
     noLoggedIn: [        
-
+        {
+            path: '/game',            
+            element: <Game/>
+        },      
+        
         {
             path: '/',            
             element: <Home/>
         } 
-        
     ],   
 }

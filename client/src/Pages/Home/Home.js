@@ -46,8 +46,13 @@ const onLogin = async () => {
   try {
     const response = await axiosInstance.post('/user/login', { email, password });  // llamada al back y obtenemos el token       
     const accesToken = response.data.accessToken;    
-    setToken(accesToken);  
-    console.log(accesToken)
+    if (accesToken && response.status == 200) {
+      localStorage.setItem('token', accesToken); 
+      localStorage.setItem('usermail', email);
+      setToken(accesToken); 
+      //navigate("/game"); 
+    }
+    //console.log(accesToken)
   } catch (error) {
     loginNotify();
     console.log(error);    
@@ -77,18 +82,16 @@ const onRegister = async () => {
 
 // guardamos el token en el local storage para poder usarlo en Game
 useEffect(() => {
-  if (token) {    
-    // console.log("token: " + token); 
-    localStorage.setItem('token', token);
-    localStorage.setItem('usermail', email);
-    navigate("/game");                                                 
-  }        
+  if (token){
+      navigate("/game");      
+    }
 }, [token]) 
 
 // limpiamos el local storage apenas se inicia la app
 useEffect(() => { 
     localStorage.clear();                                              
   }, []) 
+
 
   return (
     <section className='home'>
