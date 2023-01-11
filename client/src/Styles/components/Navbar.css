@@ -129,8 +129,7 @@ nav {
     height: 3.5rem;
   }
   .navbar .navbar__sitelogo img {
-    width: 6rem;
-    padding-left: 1rem;
+    display: none;
   }
   .navbar .hud {
     margin-right: 1rem;
