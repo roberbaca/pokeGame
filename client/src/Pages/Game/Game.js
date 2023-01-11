@@ -122,6 +122,7 @@ const Game = ({searchPokemon}) => {
   }
 
 
+  // muestra el sig pokemon
   const newGame = () => {
     setReveal(false);  
     setSelected0(false);
@@ -205,6 +206,8 @@ const Game = ({searchPokemon}) => {
     waitToast();  
     getPokemonData();  
     getRanks();
+    setGuessCount(0);
+    setNewRecord(false);
 
     if (!token){
       navigate("/");  
