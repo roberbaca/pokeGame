@@ -211,14 +211,14 @@ nav {
     .navbar {    
         height: 3.5rem;  
         .navbar__sitelogo img {
-            width: 6rem;
-            padding-left: 1rem;
+          display: none;
         }      
     
         .hud {     
             margin-right: 1rem;   
             padding-top: 0.5rem;    
-            padding-bottom: 0.5rem;  
+            padding-bottom: 0.5rem; 
+            margin-left: 0; 
 
             .hud__scorewraper {  
                 margin: 0;
@@ -231,7 +231,7 @@ nav {
         
                     .hud__title {
                         font-size: 1rem;
-                        width: 5rem;
+                        width: 4rem;
                     }  
                 }  
                 
@@ -247,7 +247,7 @@ nav {
         } 
     
         .hud__icons {
-           display: none;
+           //display: none;
         }      
     }     
 }
