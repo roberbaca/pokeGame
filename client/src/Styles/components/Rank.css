@@ -102,4 +102,15 @@ html {
   margin-bottom: 0;
 }
 
+@media (max-width: 376px) {
+  .rank__section .rank__table {
+    width: 18rem;
+  }
+}
+@media (max-width: 320px) {
+  .rank__section .rank__table {
+    width: 18rem;
+  }
+}
+
 /*# sourceMappingURL=Rank.css.map */

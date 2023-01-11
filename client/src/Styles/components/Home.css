@@ -208,7 +208,7 @@ html {
     padding-right: 0.5rem;
   }
   .home .home__title {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
@@ -226,10 +226,11 @@ html {
   }
   .home .home__wraper .form__subtitle {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   .home .home__wraper .form__wraper {
-    margin-bottom: 4rem;
-    width: 60%;
+    margin-bottom: 1rem;
+    width: 50%;
   }
 }
 
